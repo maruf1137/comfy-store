@@ -17,6 +17,7 @@ import Stars from "./Stars.jsx";
 import CartContent from "./CarContent.jsx";
 import PageHero from "./PageHero.jsx";
 import StripeCheckout from "./StripeCheckout";
+
 export {
   FeaturedProducts,
   Navbar,
