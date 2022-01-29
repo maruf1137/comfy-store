@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.svg";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { links } from "../utils/constants";
@@ -9,6 +8,7 @@ import { useProductsContext } from "../context/products_context";
 import { useUserContext } from "../context/user_context";
 
 const Nav = () => {
+  const logo = 'https://i.ibb.co/mN6GxkW/m-shop-logo.png'
   const { opensidebar } = useProductsContext();
   const { myUser } = useUserContext();
   return (
@@ -59,8 +59,8 @@ const NavContainer = styled.nav`
     align-items: center;
     justify-content: space-between;
     img {
-      width: 175px;
       margin-left: -15px;
+      height: 4rem;
     }
   }
   .nav-toggle {

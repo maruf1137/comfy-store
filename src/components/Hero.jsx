@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import heroBcg from "../assets/hero-bcg.jpeg";
-import heroBcg2 from "../assets/hero-bcg-2.jpeg";
+
 
 const Hero = () => {
+  const heroBcg = "https://i.ibb.co/r03QxZ0/pexels-pixabay-37347.jpg";
+  const heroBcg2 = "https://i.ibb.co/f2Drnjj/pexels-terje-sollie-312029.jpg";
+  const heroBcg3 = "https://i.ibb.co/bHLQRF9/pexels-houzlook-com-3797991.jpg";
+
   return (
     <Wrapper className="section-center">
       <article className="content">
@@ -22,6 +25,7 @@ const Hero = () => {
       <article className="img-container">
         <img src={heroBcg} alt="nice table" className="main-img" />
         <img src={heroBcg2} alt="person working" className="accent-img" />
+        <img src={heroBcg3} alt="person working" className="accent-img-2" />
       </article>
     </Wrapper>
   );
@@ -53,39 +57,46 @@ const Wrapper = styled.section`
       font-size: 1.25rem;
     }
     .hero-btn {
-      padding: 0.75rem 1.5rem;
+      padding: 1rem 2.5rem;
       font-size: 1rem;
     }
     .img-container {
       display: block;
       position: relative;
-    }
-    .main-img {
+      height:100%;
       width: 100%;
-      height: 550px;
-      position: relative;
+    }
+
+    .accent-img, .accent-img-2,.main-img{
+      position: absolute;
+      height: 260px;
+      width: 260px;
       border-radius: var(--radius);
-      display: block;
       object-fit: cover;
+    } 
+    .main-img {
+      top:0;
+      left: 25%;
     }
-    .accent-img {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 250px;
-      transform: translateX(-50%);
-      border-radius: var(--radius);
+    .accent-img{
+      bottom: 10%;
+      left: -15%;
     }
-    .img-container::before {
-      content: "";
-      position: absolute;
-      width: 10%;
-      height: 80%;
-      background: var(--clr-primary-9);
-      bottom: 0%;
-      left: -8%;
-      border-radius: var(--radius);
+    .accent-img-2{
+      bottom: 10%;
+      right: 0;
     }
+
+    // .img-container::before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 10%;
+    //   height: 80%;
+    //   background: var(--clr-primary-9);
+    //   bottom: 0%;
+    //   left: -8%;
+    //   border-radius: var(--radius);
+    // }
   }
 `;
 
